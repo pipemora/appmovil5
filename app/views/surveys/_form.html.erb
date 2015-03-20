@@ -1,0 +1,61 @@
+<%= form_for(@survey) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :genero %><br>
+    <%= f.text_field :genero %>
+  </div>
+  <div class="field">
+    <%= f.label :edad %><br>
+    <%= f.number_field :edad %>
+  </div>
+  <div class="field">
+    <%= f.label :presupuesto %><br>
+    <%= f.number_field :presupuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :compania %><br>
+    <%= f.text_field :compania %>
+  </div>
+  <div class="field">
+    <%= f.label :factores %><br>
+    <%= f.text_field :factores %>
+  </div>
+  <div class="field">
+    <%= f.label :importante %><br>
+    <%= f.text_field :importante %>
+  </div>
+  <div class="field">
+    <%= f.label :color %><br>
+    <%= f.text_field :color %>
+  </div>
+  <div class="field">
+    <%= f.label :lineas %><br>
+    <%= f.text_field :lineas %>
+  </div>
+  <div class="field">
+    <%= f.label :economizar %><br>
+    <%= f.text_field :economizar %>
+  </div>
+  <div class="field">
+    <%= f.label :dispuesto %><br>
+    <%= f.text_field :dispuesto %>
+  </div>
+  <div class="field">
+    <%= f.label :eres %><br>
+    <%= f.text_field :eres %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

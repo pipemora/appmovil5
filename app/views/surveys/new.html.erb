@@ -1,0 +1,138 @@
+<h1>New Survey</h1>
+
+<%= form_for(@survey) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>Género</p>
+  	<div class="field">
+  	  <%= f.radio_button :genero, 'Hombre' %> 
+  	  <%= f.label :genero, 'Hombre', :value => 'Hombre' %>
+   	  <%= f.radio_button :genero, 'Mujer' %>
+  	  <%= f.label :genero, 'Mujer', :value => 'Mujer' %>
+    
+  </div>
+
+  <p>Edad</p>
+  <div class="field">
+
+    <%= f.radio_button :edad, '17 a 24 años' %> 
+  	  <%= f.label :edad, '17 a 24 años', :value => '17 a 24 años' %>
+   	  <%= f.radio_button :edad, '25 a 40 años' %>
+  	  <%= f.label :edad, '25 a 40 años', :value => '25 a 40 años' %>
+  	  <%= f.radio_button :edad, '41 a 60 años' %>
+  	  <%= f.label :edad, '41 a 60 años', :value => '41 a 60 años' %>
+  	  <%= f.radio_button :edad, '61 a 80 años' %>
+  	  <%= f.label :edad, '61 a 80 años', :value => '61 a 80 años' %>
+  </div>
+
+  <p>Cuéntanos tu presupuesto</p>
+  <div class="field">
+    <%= f.radio_button :presupuesto, 'De 20.000.000 a 50.000.000' %> 
+  	  <%= f.label :presupuesto, 'De 20.000.000 a 50.000.000', :value => 'De 20.000.000 a 50.000.000' %>
+   	  <%= f.radio_button :presupuesto, 'De 51.000.000 a 70.000.000' %>
+  	  <%= f.label :presupuesto, 'De 51.000.000 a 70.000.000', :value => '2De 51.000.000 a 70.000.000' %>
+  	  <%= f.radio_button :presupuesto, 'De 71.000.000 a 90.000.000' %>
+  	  <%= f.label :presupuesto, 'De 71.000.000 a 90.000.000', :value => 'De 71.000.000 a 90.000.000' %>
+  	  <%= f.radio_button :presupuesto, 'De 91.000.000 a 250.000.000' %>
+  	  <%= f.label :presupuesto, 'De 91.000.000 a 250.000.000', :value => 'De 91.000.000 a 250.000.000' %>
+  </div>
+
+  <p>¿Disfrutas de la compañía al volante?</p>
+  <div class="field">
+    <%= f.radio_button :compania, 'Tus amigos son amigos de tu carro' %> 
+  	  <%= f.label :compania, 'Tus amigos son amigos de tu carro', :value => 'Tus amigos son amigos de tu carro' %>
+   	  <%= f.radio_button :compania, 'Prefieres solo montar a tu novia' %>
+  	  <%= f.label :compania, 'Prefieres solo montar a tu novia', :value => 'Prefieres solo montar a tu novia' %>
+  	  <%= f.radio_button :compania, 'Tus hijos necesitan espacio en tu carro' %>
+  	  <%= f.label :compania, 'Tus hijos necesitan espacio en tu carro', :value => 'Tus hijos necesitan espacio en tu carro' %>
+  </div>
+
+  <p>Selecciona el factor más importante para ti</p>
+	<div class="field"> 
+    <%= f.radio_button :factores, 'Lujo' %> 
+  	  <%= f.label :factores, 'Lujo', :value => 'Lujo' %>
+   	  <%= f.radio_button :factores, 'Seguridad' %>
+  	  <%= f.label :factores, 'Seguridad', :value => 'Seguridad' %>
+  	  <%= f.radio_button :factores, 'Garantía' %>
+  	  <%= f.label :factores, 'Garantía', :value => 'Garantía' %>
+  	  <%= f.radio_button :factores, 'Aceleración' %>
+  	  <%= f.label :factores, 'Aceleración', :value => 'Aceleración' %>
+  	  <%= f.radio_button :factores, 'Estilo familiar' %>
+  	  <%= f.label :factores, 'Estilo familiar', :value => 'Estilo familiar' %>
+  </div>
+
+  <p>En cuanto al motor, ¿qué prefieres?</p>
+  <div class="field">
+    <%= f.radio_button :importante, 'Bajo consumo' %> 
+  	  <%= f.label :importante, 'Bajo consumo', :value => 'Bajo consumo' %>
+   	  <%= f.radio_button :importante, 'Gran potencia' %>
+  	  <%= f.label :importante, 'Gran potencia', :value => 'Gran potencia' %>
+  	  <%= f.radio_button :importante, 'Cuidado del medio ambiente' %>
+  	  <%= f.label :importante, 'Cuidado del medio ambiente', :value => 'Cuidado del medio ambiente' %>
+  </div>
+
+    <p>¿Qué color elegrías para tu carro?</p>
+	<div class="field">
+    <%= f.radio_button :color, 'Plateado' %> 
+  	  <%= f.label :color, 'Plateado', :value => 'Plateado' %>
+   	  <%= f.radio_button :color, 'Blanco' %>
+  	  <%= f.label :color, 'Blanco', :value => 'Blanco' %>
+  	  <%= f.radio_button :color, 'Negro' %>
+  	  <%= f.label :color, 'Negro', :value => 'Negro' %>
+  	  <%= f.radio_button :color, 'Azul' %>
+  	  <%= f.label :color, 'Azul', :value => 'Azul' %>
+  	  <%= f.radio_button :color, 'Rojo' %>
+  	  <%= f.label :color, 'Rojo', :value => 'Rojo' %>
+  </div>
+
+  	<p>Te gustan más los carros con líneas:</p>
+  	<div class="field">
+    <%= f.radio_button :lineas, 'Tiernas' %> 
+  	  <%= f.label :lineas, 'Tiernas', :value => 'Tiernas' %>
+   	  <%= f.radio_button :lineas, 'Agresivas' %>
+  	  <%= f.label :lineas, 'Agresivas', :value => 'Agresivas' %>
+  </div>
+
+  <p>¿En qué prefieres economizar?</p>
+  <div class="field">
+    <%= f.radio_button :economizar, 'Valor de los repuestos y el servicio' %> 
+  	  <%= f.label :economizar, 'Valor de los repuestos y el servicio', :value => 'Valor de los repuestos y el servicio' %>
+   	  <%= f.radio_button :economizar, 'Valor inicial' %>
+  	  <%= f.label :economizar, 'Valor inicial', :value => 'Valor inicial' %>
+  </div>
+
+  <p>Estás dispuesto/a: </p>
+  <div class="field">
+    <%= f.radio_button :dispuesto, 'Economizar al máximo en tu rango presupuestal' %> 
+  	  <%= f.label :dispuesto, 'Economizar al máximo en tu rango presupuestal', :value => 'Economizar al máximo en tu rango presupuestal' %>
+   	  <%= f.radio_button :dispuesto, 'Gastar al máximo en tu rango presupuestal' %>
+  	  <%= f.label :dispuesto, 'Gastar al máximo en tu rango presupuestal', :value => 'Gastar al máximo en tu rango presupuestal' %>
+  </div>
+
+  <p>Eres:</p>
+  <div class="field">
+    <%= f.radio_button :eres, 'Deportista' %> 
+  	  <%= f.label :eres, 'Deportista', :value => 'Deportista' %>
+   	  <%= f.radio_button :eres, 'Viajero' %>
+  	  <%= f.label :eres, 'Viajero', :value => 'Viajero' %>
+  	  <%= f.radio_button :eres, 'Citadino' %>
+  	  <%= f.label :eres, 'Citadino', :value => 'Citadino' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+
+<%= link_to 'Back', surveys_path %>

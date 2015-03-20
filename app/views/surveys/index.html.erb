@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Surveys</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Genero</th>
+      <th>Edad</th>
+      <th>Presupuesto</th>
+      <th>Compania</th>
+      <th>Factores</th>
+      <th>Importante</th>
+      <th>Color</th>
+      <th>Lineas</th>
+      <th>Economizar</th>
+      <th>Dispuesto</th>
+      <th>Eres</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @surveys.each do |survey| %>
+      <tr>
+        <td><%= survey.genero %></td>
+        <td><%= survey.edad %></td>
+        <td><%= survey.presupuesto %></td>
+        <td><%= survey.compania %></td>
+        <td><%= survey.factores %></td>
+        <td><%= survey.importante %></td>
+        <td><%= survey.color %></td>
+        <td><%= survey.lineas %></td>
+        <td><%= survey.economizar %></td>
+        <td><%= survey.dispuesto %></td>
+        <td><%= survey.eres %></td>
+        <td><%= link_to 'Show', survey %></td>
+        <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+        <td><%= link_to 'Destroy', survey, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Survey', new_survey_path %>

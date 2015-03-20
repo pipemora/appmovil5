@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  genero: MyString
+  edad: 1
+  presupuesto: 1
+  compania: MyString
+  factores: MyString
+  importante: MyString
+  color: MyString
+  lineas: MyString
+  economizar: MyString
+  dispuesto: MyString
+  eres: MyString
+
+two:
+  genero: MyString
+  edad: 1
+  presupuesto: 1
+  compania: MyString
+  factores: MyString
+  importante: MyString
+  color: MyString
+  lineas: MyString
+  economizar: MyString
+  dispuesto: MyString
+  eres: MyString
